@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS showrooms ( script_id INT AUTO_INCREMENT PRIMARY KEY, sbu_code VARCHAR(30), loc_code VARCHAR(100), database_name VARCHAR(500), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+INSERT INTO showrooms (sbu_code, loc_code, database_name) VALUES ("830", "100", "marksys"), ("830", "200", "markys"), ("830", "300", "marksys"), ("830", "400", "marksys"), ("830", "500", "marksys"), ("830", "600", "marksys");

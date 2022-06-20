@@ -1,0 +1,91 @@
+
+=====================================================================
+
+      ************* Marksys Version Controller *************
+
+=====================================================================
+
+
+(TMARKSYS DB)
+
+Location Server Username = "superc"
+Location Server Password = "superc"
+Location Server DB Username = "marksys"
+Location Server DB Password = "synchronous%cryptography*!@#"  ->
+		-> (NzSK4TWUb9VtAmOTB6MBmjYId74+Eh+IoApUmfRqY4I=)
+
+*You should pass the 'Programe Arguments' before execute the project
+		-----------------------------------
+			[ ADA | SC | SR ]
+		-----------------------------------
+
+
+#####################################################################
+
+
+find all RPD Locations Details
+-------------------------------
+SELECT * FROM RMS_SITES WHERE SBU_CODE='830';
+
+LOC_CODE => Location Code
+SITE_NAME => Location Name
+IP => Location Server IP Address
+DB => Location Server Database Name
+CRE_BY => Location Server Port
+MOD_BY => Location Type (SC -> Super Center / ADA -> Arpico Daily)
+PASSWORD => Location Server  Database Password
+USERID => Location Server Database Username
+DBTYPE => Location Server Database Type (MySql or Oracle)
+
+
+#####################################################################
+
+
+find all file path parameters
+------------------------------
+SELECT * FROM SMSYSPARA WHERE SBUCOD='830' AND PARCOD='VCPATHS';
+
+CVAL01 => Local First Jar File Path
+CVAL02 => Remote First File Path
+CCOMM => Local Second Jar File Path
+CVAL03 => Remore Second File Path
+CREMA => Local SQL-Script File Path
+
+
+#####################################################################
+
+
+find all file name parameters
+------------------------------
+SELECT * FROM SMSYSPARA WHERE SBUCOD='830' AND PARCOD='VCFILES';
+
+CVAL01 => First Har File Name
+CCOMM => Second Jar File Name
+CREMA => SQL-Script File Name
+
+
+#####################################################################
+
+
+find all data report log
+--------------------------
+SELECT * FROM VC_DATA_LOG;
+
+clear data report log table
+-----------------------------
+CRUNCATE TABLE VC_DATA_LOG;
+
+
+####################################################################
+
+
+find all executed sql queries
+-------------------------------
+SELECT * FROM VC_SQL_QUERY;
+
+clear executed sql query table
+-------------------------------
+CRUNCATE TABLE VC_DATA_LOG;
+
+
+####################################################################
